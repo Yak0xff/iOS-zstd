@@ -20,15 +20,21 @@ Dictionary compression How To :
 
 1) Create the dictionary
 
+```
 zstd --train FullPathToTrainingSet/* -o dictionaryName
+```
 
 2) Compress with dictionary
 
+```
 zstd FILE -D dictionaryName
+```
 
 3) Decompress with dictionary
 
+```
 zstd --decompress FILE.zst -D dictionaryName
+```
 
 
 The `NSData+zstdSimple` use the `preset.zdict` preset dictionary file name, you can use your likes.
