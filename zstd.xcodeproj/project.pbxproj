@@ -29,6 +29,7 @@
 		00EAA2981DD4486300CCA720 /* huf_decompress.c in Sources */ = {isa = PBXBuildFile; fileRef = 00EAA2951DD4486300CCA720 /* huf_decompress.c */; };
 		00EAA2991DD4486300CCA720 /* zbuff_decompress.c in Sources */ = {isa = PBXBuildFile; fileRef = 00EAA2961DD4486300CCA720 /* zbuff_decompress.c */; };
 		00EAA29A1DD4486300CCA720 /* zstd_decompress.c in Sources */ = {isa = PBXBuildFile; fileRef = 00EAA2971DD4486300CCA720 /* zstd_decompress.c */; };
+		00EAA29F1DD44DF300CCA720 /* PrefixHeader.pch in Headers */ = {isa = PBXBuildFile; fileRef = 00EAA29E1DD44DF300CCA720 /* PrefixHeader.pch */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -68,6 +69,7 @@
 		00EAA2951DD4486300CCA720 /* huf_decompress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = huf_decompress.c; sourceTree = "<group>"; };
 		00EAA2961DD4486300CCA720 /* zbuff_decompress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zbuff_decompress.c; sourceTree = "<group>"; };
 		00EAA2971DD4486300CCA720 /* zstd_decompress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zstd_decompress.c; sourceTree = "<group>"; };
+		00EAA29E1DD44DF300CCA720 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				00C408781D8FED6F00BC7CB8 /* lib */,
+				00EAA29E1DD44DF300CCA720 /* PrefixHeader.pch */,
 			);
 			path = zstd;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				003ADCDA1DB4745200A41BC6 /* zstd_internal.h in Headers */,
 				003ADCD21DB4745200A41BC6 /* fse.h in Headers */,
 				003ADCCE1DB4745200A41BC6 /* bitstream.h in Headers */,
+				00EAA29F1DD44DF300CCA720 /* PrefixHeader.pch in Headers */,
 				003ADCD01DB4745200A41BC6 /* error_private.h in Headers */,
 				00C408D01D8FED6F00BC7CB8 /* zstd.h in Headers */,
 				003ADCD51DB4745200A41BC6 /* mem.h in Headers */,
@@ -345,6 +349,7 @@
 				);
 				BITCODE_GENERATION_MODE = marker;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PREFIX_HEADER = zstd/PrefixHeader.pch;
 				OTHER_CFLAGS = "-fembed-bitcode-marker";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -363,6 +368,7 @@
 				BITCODE_GENERATION_MODE = bitcode;
 				COPY_PHASE_STRIP = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PREFIX_HEADER = zstd/PrefixHeader.pch;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-fembed-bitcode";
